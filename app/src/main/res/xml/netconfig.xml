@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">user.csust.creamaker.cn</domain>
+        <domain includeSubdomains="true">web.csust.creamaker.cn</domain>
+<!--        <domain includeSubdomains="true">freshnews.csust.creamaker.cn</domain>-->
+        <domain includeSubdomains="true">pt.csust.edu.cn</domain>
+        <domain includeSubdomains="true">authserver.csust.edu.cn</domain>
+        <domain includeSubdomains="true">ehall.csust.edu.cn</domain>
+        <!-- 教务系统 -->
+        <domain includeSubdomains="true">xk.csust.edu.cn</domain>
+
+        <!-- 校园卡系统 -->
+        <domain includeSubdomains="true">yktwd.csust.edu.cn</domain>
+
+        <domain includeSubdomains="true">ip-api.com</domain>
+        <!-- 评论系统 -->
+        <domain includeSubdomains="true">freshnews.csust.creamaker.cn</domain>
+        <domain includeSubdomains="true">csust.creamaker.cn</domain>
+    </domain-config>
+</network-security-config>

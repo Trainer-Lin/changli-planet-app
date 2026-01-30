@@ -1,0 +1,216 @@
+<resources>
+    <string name="app_name">长理星球</string>
+    <string name="chat">群聊</string>
+    <string name="find">发现</string>
+    <string name="news">新鲜事</string>
+    <string name="function">功能</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="query_things">提示：房间号，金村不分A区，B区则直接输入门牌号即可，云塘有A区，B区之分，则要加前缀，如B306，A504。</string>
+    <string-array name="dormitory">
+        <item>"16栋A区"</item>,
+        <item>"16栋B区"</item>,
+        <item>"17栋"</item>,
+        <item>"弘毅轩1栋A区"</item>,
+        <item>"弘毅轩1栋B区"</item>,
+        <item>"弘毅轩2栋A区1-6楼"</item>,
+        <item>"弘毅轩2栋B区"</item>,
+        <item>"弘毅轩2栋C区"</item>,
+        <item>"弘毅轩2栋D区"</item>,
+        <item>"弘毅轩3栋A区"</item>,
+        <item>"弘毅轩3栋B区"</item>,
+        <item>"弘毅轩4栋A区"</item>,
+        <item>"弘毅轩4栋B区"</item>,
+        <item>"留学生宿舍"</item>,
+        <item>"敏行轩1栋A区"</item>,
+        <item>"敏行轩1栋B区"</item>,
+        <item>"敏行轩2栋A区"</item>,
+        <item>"敏行轩2栋B区"</item>,
+        <item>"敏行轩3栋A区"</item>,
+        <item>"敏行轩3栋B区"</item>,
+        <item>"敏行轩4栋A区"</item>,
+        <item>"敏行轩4栋B区"</item>,
+        <item>"行健轩1栋A区"</item>,
+        <item>"行健轩1栋B区"</item>,
+        <item>"行健轩2栋A区"</item>,
+        <item>"行健轩2栋B区"</item>,
+        <item>"行健轩3栋A区"</item>,
+        <item>"行健轩3栋B区"</item>,
+        <item>"行健轩4栋A区"</item>,
+        <item>"行健轩4栋B区"</item>,
+        <item>"行健轩5栋A区"</item>,
+        <item>"行健轩5栋B区"</item>,
+        <item>"行健轩6栋A区"</item>,
+        <item>"行健轩6栋B区"</item>,
+        <item>"至诚轩1栋A区"</item>,
+        <item>"至诚轩1栋B区"</item>,
+        <item>"至诚轩2栋A区"</item>,
+        <item>"至诚轩2栋B区"</item>,
+        <item>"至诚轩3栋A区"</item>,
+        <item>"至诚轩3栋B区"</item>,
+        <item>"至诚轩4栋A区"</item>,
+        <item>"至诚轩4栋B区"</item>,
+        <item>"至诚轩5栋A区"</item>,
+        <item>"至诚轩5栋B区"</item>,
+        <item>"至诚轩5栋C区"</item>,
+
+        <item>"西苑1栋"</item>,
+        <item>"西苑2栋"</item>,
+        <item>"西苑3栋"</item>,
+        <item>"西苑4栋"</item>,
+        <item>"西苑5栋"</item>,
+        <item>"西苑6栋"</item>,
+        <item>"西苑7栋"</item>,
+        <item>"西苑8栋"</item>,
+        <item>"西苑9栋"</item>,
+        <item>"西苑10栋"</item>,
+        <item>"西苑11栋"</item>,
+        <item>"东苑4栋"</item>,
+        <item>"东苑5栋"</item>,
+        <item>"东苑6栋"</item>,
+        <item>"东苑9栋"</item>,
+        <item>"东苑14栋"</item>,
+        <item>"东苑15栋"</item>,
+        <item>"南苑3栋"</item>,
+        <item>"南苑4栋"</item>,
+        <item>"南苑5栋"</item>,
+        <item>"南苑7栋"</item>,
+        <item>"南苑8栋"</item>,
+    </string-array>
+    <string-array name="school_location">
+        <item>"金盆岭校区"</item>
+        <item>"云塘校区"</item>
+    </string-array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_timetable_widget_description">长理星球课表小组件</string>
+    <string name="widget_must_get_course_data">获取课表后才有数据哦~</string>
+    <string name="there_are_no_classes_today">今天已经没有课啦~</string>
+    <string name="profile_home">个人主页</string>
+    <string name="logout">退出登录</string>
+    <string name="schoolZone">校区:</string>
+    <string name="electronicQuery">电费查询</string>
+    <string name="selectSchoolZone">选择校区</string>
+    <string name="dorm">宿舍楼:</string>
+    <string name="selectDorm">选择宿舍楼</string>
+    <string name="doorNum">房间号:</string>
+    <string name="query">查询</string>
+    <string name="dorm_bind">寝室绑定</string>
+    <string name="selectDoorNum">填写房间号</string>
+    <string name="e_query">查询电量</string>
+    <string name="present_ele">当前电量：</string>
+    <string name="ele_queryDefault">无法查询，请先绑定寝室(●\'◡\'●)</string>
+    <string name="ele_queryNow">剩余电量: %1$s 度</string>
+    <string name="ele_query_false">未找到宿舍\n┭┮﹏┭┮</string>
+    <string name="ele_state_low">电量过低，建议立即充值!</string>
+    <string name="ele_state_normal">电量正常</string>
+    <string name="ele_state_high">电量充足~</string>
+    <string name="ele_state_unknown">状态未知</string>
+    <string name="feedback">意见反馈</string>
+<!--    用于MoocActivity的字符串-->
+    <string name="bind_notification">请先绑定学号和密码</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="inquiry_homework">作业查询</string>
+    <string name="pending_homework">未完成作业</string>
+    <string name="no_pending_assignments">暂无未完成作业</string>
+    <string name="school_account_not_bound_cannot_query">未绑定学校账号密码，无法查询</string>
+    <string name="error_unknown">未知错误</string>
+    <string name="feature_title_common_functions">常用功能</string>
+    <string name="feature_function_grade_query">成绩查询</string>
+    <string name="feature_function_course_schedule">课表</string>
+    <string name="feature_function_campus_map">校园地图</string>
+    <string name="feature_function_cet_exam">四六级</string>
+    <string name="feature_function_exam_schedule">考试安排</string>
+    <string name="feature_function_school_calendar">校历</string>
+    <string name="feature_function_electricity_query">电费查询</string>
+    <string name="feature_function_mandarin_test">普通话</string>
+    <string name="feature_title_others">其他</string>
+    <string name="feature_function_lost_found">失物招领</string>
+    <string name="feature_function_classroom_availability">空闲教室</string>
+    <string name="feature_function_account_book">记帐本</string>
+    <string name="feature_function_document_library">文件库</string>
+    <string name="network_error">网络错误</string>
+    <string name="reminder_area_not_found">未找到提醒区域</string>
+    <string name="account_status_abnormal_login_on_web">账号状态异常，请在网页登录一次</string>
+    <string name="feature_developing_in_progress">正在全力开发中~</string>
+    <string name="eletronic_search">当前电量</string>
+    <string name="eletronic_widget_description">长理星球电量查询小组件</string>
+    <string name="account_bind_failed">学号账号密码错误，请重新绑定</string>
+    <string name="no_classroom">无教室</string>
+    <string name="next_step">下一步</string>
+    <string name="binding_privacy_statement">隐私声明：您的学号将用于身份认证并与账号绑定，是参与校园社区交流的必要凭证。密码仅用于教务系统数据查询，采用本地存储，不会上传至云端服务器，确保您的账号安全₍ᐢ..ᐢ₎♡。如果没有登陆，则学号也只会存到本地~</string>
+    <string name="sso_webview_cancel">关闭</string>
+    <string name="password_length_restriction">密码长度至少6位</string>
+    <string name="password_change">更改密码</string>
+    <string name="password_confirm">请再次确认密码</string>
+    <string name="password_input">请输入新密码</string>
+    <string name="need_check">获取验证码</string>
+    <string name="check_input">请输入验证码</string>
+    <string name="password_get_back">找回密码</string>
+    <string name="email_input">请输入邮箱</string>
+    <string name="freshNewsTime">时间:</string>
+    <string name="all_comments">全部评论</string>
+    <string name="comments_num">(%1$d)</string>
+    <string name="post_comment">发表评论</string>
+    <string name="response">回复</string>
+    <string name="comment_hint">请友善评论</string>
+    <string name="send">发送</string>
+    <string name="et_tint">&#160;&#160;请友善评论</string>
+    <string name="on_process">加载中</string>
+    <string name="comments_empty">暂无评论，快来抢沙发吧~</string>
+    <string name="comments_error">&#160;&#160;加载失败\n┭┮﹏┭┮</string>
+    <string name="comments_no_more">没有更多评论了</string>
+    <string name="top_bar_comments">评论区</string>
+    <string name="skin_change_success">皮肤已切换</string>
+    <string name="skin_change_failure">切换失败</string>
+    <string name="skin_center">皮肤中心</string>
+    <string name="skin_using">使用中</string>
+    <string name="skin_use">使用</string>
+    <string name="skin_no_more">没有更多皮肤包了</string>
+    <string name="failure_internet">网络错误</string>
+    <string name="failure_process">加载失败</string>
+    <string name="time_table_loading">加载中</string>
+    <string name="loading_success">加载成功</string>
+    <string name="tv_top_bar_time_table">课程表</string>
+</resources>

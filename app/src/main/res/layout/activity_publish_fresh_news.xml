@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_bg_primary"
+    tools:context=".freshNews.ui.PublishFreshNewsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar"
+        android:paddingTop="@dimen/dp45"
+        android:background="@color/color_bg_top_bar">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:text="取消"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_text_grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingStart="@dimen/dp5"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:text="写新鲜事"
+            android:textColor="@color/color_text_primary"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/publish"
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/dp4"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="发布"
+            android:textColor="@color/color_text_functional"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="10dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint=" 标题"
+                android:textColorHint="@color/color_text_grey"
+                android:textColor="@color/color_text_primary"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:gravity="top"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#7E7E7E"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/dp10" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                android:hint=" 分享你的新鲜事..."
+                android:textColorHint="@color/color_text_grey"
+                android:textColor="@color/color_text_primary"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:gravity="top" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/dp5"
+                app:alignItems="stretch"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start"
+                app:alignContent="flex_start">
+
+                <ImageView
+                    android:id="@+id/add_image"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_add_image" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

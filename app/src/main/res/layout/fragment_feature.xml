@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/feature"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dp35"
+    android:background="@color/color_bg_primary"
+    tools:context=".feature.common.ui.FeatureFragment">
+
+    <!-- ComposeView 作为容器 -->
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/planet_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/featureAvatar"
+        android:layout_width="@dimen/dp42"
+        android:layout_height="@dimen/dp42"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/CircleStyle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainfunction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp12"
+        android:baselineAligned="false"
+        android:layout_marginHorizontal="@dimen/dp15"
+        app:cardBackgroundColor="@color/color_bg_card"
+        app:cardCornerRadius="@dimen/dp12"
+        app:layout_constraintTop_toBottomOf="@+id/planet_logo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp15"
+            android:background="@drawable/userui"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="@dimen/dp15"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/ceshi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/feature_title_common_functions"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ngrade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_grade_query" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ncourse"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_course_schedule" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nmap"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_campus_map" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ncet"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_cet_exam" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ntest"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_exam_schedule" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ncalender"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_school_calendar" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nelectronic"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_electricity_query" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nmande"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_mandarin_test" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:elevation="@dimen/dp12"
+        android:baselineAligned="false"
+        android:layout_marginHorizontal="@dimen/dp15"
+        app:cardBackgroundColor="@color/color_bg_card"
+        app:cardCornerRadius="@dimen/dp12"
+        app:layout_constraintTop_toBottomOf="@+id/mainfunction">
+
+        <LinearLayout
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp15"
+            android:background="@drawable/userui"
+            android:baselineAligned="false"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingStart="@dimen/dp15"
+                android:paddingTop="@dimen/dp15"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/feature_title_others"
+                    android:textColor="@color/color_text_primary"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nlose"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_lost_found" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nhomework"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/inquiry_homework" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/nclassroom"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_classroom_availability" />
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/accountbook"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_account_book" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <com.creamaker.changli_planet_app.widget.view.FunctionItem
+                    android:id="@+id/ndocument"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:itemTitle="@string/feature_function_document_library" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
