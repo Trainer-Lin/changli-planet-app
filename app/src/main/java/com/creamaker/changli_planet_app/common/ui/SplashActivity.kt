@@ -36,9 +36,7 @@ class SplashActivity : AppCompatActivity() {
 //                Route.goHome(this@SplashActivity)
 //            }
             delay(200)
-            Log.d("Trainer", "I'm going home now")
             Route.goHome(this@SplashActivity)
-            Log.d("Trainer", "home")
 
             finish()
         }

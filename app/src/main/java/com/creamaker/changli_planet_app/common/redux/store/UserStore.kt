@@ -51,24 +51,18 @@ class UserStore : Store<UserState, UserAction>() {
         currentState = when (action) {
             is UserAction.GetCurrentUserProfile -> {
 
-                Log.d("Trainer", "getCurrentUserProfile")
-
                 val httpUrlHelper = HttpUrlHelper.HttpRequest()
                     .get(PlanetApplication.Companion.UserIp + "/me/profile")
                     .build()
 
-                Log.d("Trainer", "OKRequest")
-
                 OkHttpHelper.sendRequest(httpUrlHelper, object : RequestCallback {
                     override fun onSuccess(response: Response) {
-                        Log.d("Trainer", "OKSuccess")
                         val fromJson = OkHttpHelper.gson.fromJson(
                             response.body?.string(),
                             UserProfileResponse::class.java
                         )
                         when (fromJson.code) {
                             "200" -> {
-                                Log.d("Trainer", "OK200")
                                 fromJson.data?.let {
                                     CoroutineScope(Dispatchers.IO).launch {
                                         cache.insertUser(it.toEntity())
@@ -90,7 +84,6 @@ class UserStore : Store<UserState, UserAction>() {
 
                             //修改
 //                            else -> {
-//                                Log.d("Trainer", "OK!200")
 //                                handler.post {
 //                                    CustomToast.Companion.showMessage(
 //                                        action.context,
@@ -103,7 +96,6 @@ class UserStore : Store<UserState, UserAction>() {
                     }
 
                     override fun onFailure(error: String) {
-                        Log.d("Trainer", "OKFailure")
                         handler.post {
                             CustomToast.Companion.showMessage(action.context, "获取用户信息失败")
                         }
@@ -119,44 +111,39 @@ class UserStore : Store<UserState, UserAction>() {
             }
 
             is UserAction.GetCurrentUserStats -> {
-                Log.d("Trainer", "getCurrentUserState")
-
                 val httpUrlHelper = HttpUrlHelper.HttpRequest()
                     .get(PlanetApplication.Companion.UserIp + "/me/stats")
                     .build()
-                Log.d("Trainer", "Send Request")
                 OkHttpHelper.sendRequest(httpUrlHelper, object : RequestCallback {
                     override fun onSuccess(response: Response) {
-                        Log.d("Trainer", "stateOnSuccess")
                         val fromJson = OkHttpHelper.gson.fromJson(
                             response.body?.string(),
                             UserStatsResponse::class.java
                         )
                         when (fromJson.code) {
                             "200" -> {
-                                Log.d("Trainer", "200")
                                 fromJson.data?.let {
                                     currentState.userStats = it
                                 }
                             }
 
                             //修改
-//                            else -> {
-//                                handler.post {
-//                                    Log.d("Trainer", "!200")
-//                                    CustomToast.Companion.showMessage(
-//                                        action.context,
-//                                        "请求失败, ${fromJson.msg}"
-//                                    )
-//                                }
-//                            }
+                           else -> {
+                               if(!PlanetApplication.Companion.is_expired) {
+                                   handler.post {
+                                       CustomToast.Companion.showMessage(
+                                           action.context,
+                                           "请求失败, ${fromJson.msg}"
+                                       )
+                                   }
+                               }
+                           }
                         }
 
                         _state.onNext(currentState)
                     }
 
                     override fun onFailure(error: String) {
-                        Log.d("Trainer", "Failure")
                         handler.post {
                             CustomToast.Companion.showMessage(action.context, "获取用户动态信息失败")
                         }

@@ -344,8 +344,6 @@ class FreshNewsViewModel : MviViewModel<FreshNewsContract.Intent, FreshNewsContr
                     }
                     is ApiResponse.Error -> {
                         //修改
-                        Log.d("Trainer", "${PlanetApplication.Companion.is_expired}")
-
                         if (page == 1) updateState {
                             copy(
                                 freshNewsListResults = ApiResponse.Error(

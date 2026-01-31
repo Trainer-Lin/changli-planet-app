@@ -104,7 +104,6 @@ class LoginActivity : FullScreenActivity<ActivityLoginBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("Trainer", "LoginActivity")
         initView()
         initListener()
         checkUpdate()

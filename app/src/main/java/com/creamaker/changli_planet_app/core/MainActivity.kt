@@ -52,7 +52,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         EventBus.getDefault().register(this)
-        Log.d("Trainer", "MainActivity")
 //        if (PlanetApplication.Companion.accessToken.isNullOrEmpty() && !PlanetApplication.Companion.is_tourist) {
 //            Route.goLogin(this@MainActivity)
 //            finish()
@@ -90,10 +89,8 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
 
 //            if( !PlanetApplication.Companion.is_tourist) {  //游客模式不获取用户信息
 //                launch(Dispatchers.IO) {
-//                    Log.d("Trainer", "9")
 //                    store.dispatch(UserAction.GetCurrentUserStats(this@MainActivity))
 //                    store.dispatch(UserAction.GetCurrentUserProfile(this@MainActivity))
-//                    Log.d("Trainer", "10")
 //                }
 //            }
         }
@@ -123,7 +120,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        Log.d("Trainer", "onRestoreInstanceState")
         currentTabPosition = savedInstanceState.getInt("currentTab") //恢复最后的tab下标
 
         supportFragmentManager.fragments.forEach { fragment ->
@@ -141,7 +137,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("Trainer", "onDestroy")
         EventBus.getDefault().unregister(this)
         disposables.clear()
         TabAnimationPool.clear()
@@ -149,7 +144,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
 
     override fun onStart() {
         super.onStart()
-        Log.d("Trainer", "onStart")
         if(!PlanetApplication.is_tourist) {   //游客模式不获取用户信息
             lifecycleScope.launch {
                 launch(Dispatchers.IO) {
@@ -195,7 +189,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        Log.d("Trainer","onRequestPermissionResult")
         when (requestCode) {
             REQUEST_READ_TELEPHONE ->
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -249,11 +242,10 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
 
     private fun switchFragment(newFragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        Log.d("Trainer","Token is ${PlanetApplication.is_expired}")
+
         //修改
 
         if(newFragment == fragments[1] && PlanetApplication.is_expired){
-            Log.d("Trainer", "yes")
             Route.goLogin(this@MainActivity)
         }
 
@@ -274,7 +266,6 @@ class MainActivity : FullScreenActivity<ActivityMainBinding>(), DrawerController
     }
 
     private fun initFragment(fragment: Fragment) {
-        Log.d("Trainer","initFragment")
         val fragmentationTemp = supportFragmentManager
         val transactions = fragmentationTemp.beginTransaction()
         transactions.replace(R.id.frag, fragment).commit()
